@@ -1,0 +1,11 @@
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Feed.Froogle\Views\FeedFroogle\Configure.cshtml
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Feed.Froogle\Description.txt
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Feed.Froogle\web.config
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Feed.Froogle\Content\styles.css
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Feed.Froogle\logo.jpg
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugin.Feed.Froogle.dll.config
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugin.Feed.Froogle.dll
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugin.Feed.Froogle.pdb
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.csprojResolveAssemblyReference.cache
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.dll
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.pdb

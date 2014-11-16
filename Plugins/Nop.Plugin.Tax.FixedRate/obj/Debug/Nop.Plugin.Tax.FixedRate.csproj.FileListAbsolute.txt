@@ -1,0 +1,10 @@
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Tax.FixedRate\Description.txt
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Tax.FixedRate\web.config
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Tax.FixedRate\Views\TaxFixedRate\Configure.cshtml
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Tax.FixedRate\logo.jpg
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.dll.config
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.dll
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.pdb
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.csprojResolveAssemblyReference.cache
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.dll
+G:\DEVELOPMENT\NopCommerce\nopCommerce_3.40_Source\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.pdb
