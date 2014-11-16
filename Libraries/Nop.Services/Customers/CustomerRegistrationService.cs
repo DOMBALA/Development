@@ -6,6 +6,9 @@ using Nop.Services.Localization;
 using Nop.Services.Messages;
 using Nop.Services.Security;
 using Nop.Services.Stores;
+using Nop.Core.Domain.Vendors;
+using Nop.Services.Vendors;
+
 
 namespace Nop.Services.Customers
 {
@@ -21,6 +24,7 @@ namespace Nop.Services.Customers
         private readonly INewsLetterSubscriptionService _newsLetterSubscriptionService;
         private readonly ILocalizationService _localizationService;
         private readonly IStoreService _storeService;
+        private readonly IVendorService _vendorService;
         private readonly RewardPointsSettings _rewardPointsSettings;
         private readonly CustomerSettings _customerSettings;
 
@@ -36,6 +40,7 @@ namespace Nop.Services.Customers
         /// <param name="newsLetterSubscriptionService">Newsletter subscription service</param>
         /// <param name="localizationService">Localization service</param>
         /// <param name="storeService">Store service</param>
+        /// <param name="vendorService">Vendor service</param>
         /// <param name="rewardPointsSettings">Reward points settings</param>
         /// <param name="customerSettings">Customer settings</param>
         public CustomerRegistrationService(ICustomerService customerService, 
@@ -43,6 +48,7 @@ namespace Nop.Services.Customers
             INewsLetterSubscriptionService newsLetterSubscriptionService,
             ILocalizationService localizationService,
             IStoreService storeService,
+            IVendorService vendorService,
             RewardPointsSettings rewardPointsSettings,
             CustomerSettings customerSettings)
         {
@@ -51,6 +57,7 @@ namespace Nop.Services.Customers
             this._newsLetterSubscriptionService = newsLetterSubscriptionService;
             this._localizationService = localizationService;
             this._storeService = storeService;
+            this._vendorService = vendorService;
             this._rewardPointsSettings = rewardPointsSettings;
             this._customerSettings = customerSettings;
         }
@@ -115,7 +122,10 @@ namespace Nop.Services.Customers
         /// </summary>
         /// <param name="request">Request</param>
         /// <returns>Result</returns>
-        public virtual CustomerRegistrationResult RegisterCustomer(CustomerRegistrationRequest request)
+        
+        /// Added by AliB
+        public virtual CustomerRegistrationResult RegisterCustomer(CustomerRegistrationRequest request, string fullname = "")
+        /// public virtual CustomerRegistrationResult RegisterCustomer(CustomerRegistrationRequest request)
         {
             if (request == null)
                 throw new ArgumentNullException("request");
@@ -213,6 +223,24 @@ namespace Nop.Services.Customers
             if (registeredRole == null)
                 throw new NopException("'Registered' role could not be loaded");
             request.Customer.CustomerRoles.Add(registeredRole);
+
+            /// Added by AliB
+            // make registered user as a vendor too.
+            {
+                var vendor = new Vendor()
+                {
+                    Name = fullname,
+                    Email = request.Customer.Email,
+                    Active = true
+                };
+                this._vendorService.InsertVendor(vendor);
+                request.Customer.VendorId = vendor.Id;
+
+                registeredRole = _customerService.GetCustomerRoleBySystemName(SystemCustomerRoleNames.Vendors);
+                if (registeredRole == null) throw new NopException("'Vendors' role could not be loaded");
+                request.Customer.CustomerRoles.Add(registeredRole);
+            }
+
             //remove from 'Guests' role
             var guestRole = request.Customer.CustomerRoles.FirstOrDefault(cr => cr.SystemName == SystemCustomerRoleNames.Guests);
             if (guestRole != null)

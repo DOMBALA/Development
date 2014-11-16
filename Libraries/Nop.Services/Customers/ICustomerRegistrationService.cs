@@ -20,7 +20,10 @@ namespace Nop.Services.Customers
         /// </summary>
         /// <param name="request">Request</param>
         /// <returns>Result</returns>
-        CustomerRegistrationResult RegisterCustomer(CustomerRegistrationRequest request);
+        
+        /// Added by AliB
+        CustomerRegistrationResult RegisterCustomer(CustomerRegistrationRequest request, string fullname = "");
+        /// CustomerRegistrationResult RegisterCustomer(CustomerRegistrationRequest request);
 
         /// <summary>
         /// Change password

@@ -766,7 +766,10 @@ namespace Nop.Web.Controllers
                 bool isApproved = _customerSettings.UserRegistrationType == UserRegistrationType.Standard;
                 var registrationRequest = new CustomerRegistrationRequest(customer, model.Email,
                     _customerSettings.UsernamesEnabled ? model.Username : model.Email, model.Password, _customerSettings.DefaultPasswordFormat, isApproved);
-                var registrationResult = _customerRegistrationService.RegisterCustomer(registrationRequest);
+                
+                /// Added by AliB
+                var registrationResult = _customerRegistrationService.RegisterCustomer(registrationRequest, model.FirstName + " " + model.LastName); 
+                /// var registrationResult = _customerRegistrationService.RegisterCustomer(registrationRequest);
                 if (registrationResult.Success)
                 {
                     //properties
